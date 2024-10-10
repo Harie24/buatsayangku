@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mengisi tinggi viewport */
+  margin: 0;
+  background: url('foto/wallpaper.jpg') no-repeat center center fixed; /* Ganti 'wallpaper.jpg' dengan nama file gambar Anda */
+  background-size: cover; /* Menyesuaikan gambar agar memenuhi area */
+  font-family: 'Poppins', sans-serif; /* Ganti font sesuai kebutuhan */
+  overflow: hidden; /* Menghindari scrollbar pada efek animasi */
+}
+
+.blur-box {
+  background: rgba(255, 255, 255, 0.5); /* Mengurangi transparansi untuk melihat wallpaper lebih jelas */
+  backdrop-filter: blur(5px); /* Tingkat blur yang lebih kuat */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* Atur lebar sesuai kebutuhan */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan kotak untuk efek visual */
+}
+
+.flower {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 80px; /* Ukuran bunga */
+  opacity: 0.5; /* Transparansi bunga */
+  animation: float 5s infinite; /* Efek animasi melayang */
+}
+
+/* Animasi Bunga */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+h1 {
+  font-size: 30px; /* Ukuran font untuk judul */
+  color: #ff69b4; /* Warna font */
+  margin: 0; /* Menghapus margin default */
+  font-weight: 700; /* Mengatur font menjadi tebal */
+}
+
+p {
+  font-size: 17px; /* Ukuran font untuk paragraf, lebih besar agar lebih menarik */
+  color: #333; /* Warna font */
+  font-weight: 500; /* Mengatur font menjadi semi-tebal */
+  margin: 10px 0; /* Menambahkan margin atas dan bawah */
+}
+
+input {
+  width: 90%; /* Lebar input */
+  padding: 10px; /* Padding dalam input */
+  margin-top: 10px; /* Margin atas untuk jarak dengan elemen di atasnya */
+  border: 1px solid #ccc; /* Border input */
+  border-radius: 5px; /* Sudut membulat */
+  font-size: 16px; /* Ukuran font untuk input */
+}
+
+button {
+  margin-top: 10px; /* Margin atas untuk jarak dengan elemen di atasnya */
+  padding: 10px; /* Padding dalam tombol */
+  border: none; /* Tanpa border */
+  background-color: #ff69b4; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border-radius: 5px; /* Sudut membulat */
+  cursor: pointer; /* Pointer saat hover */
+  font-size: 16px; /* Ukuran font untuk tombol */
+  transition: background-color 0.3s; /* Transisi warna latar belakang saat hover */
+}
+
+button:hover {
+  background-color: #ff1493; /* Warna latar belakang tombol saat hover */
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto; /* Membuat galeri dapat digeser secara horizontal */
+  padding: 10px;
+}
+
+.gallery-photo {
+  width: 200px; /* Ukuran foto dalam galeri */
+  height: auto; /* Menyesuaikan tinggi gambar */
+  margin: 0 10px; /* Jarak antara gambar */
+  border-radius: 10px; /* Sudut membulat pada gambar */
+}
